@@ -6,7 +6,24 @@ export const sample = [
     avatar: "https://randomuser.me/api/portraits/men/1.jpg",
     author: "Dr. Neil Carter",
     image: "/img/hero.jpg",
-    content: "Explore black holes, dark matter, and the expanding universe.",
+    content: `Travel? Yeah, okay.
+            He oppose at thrown desire of no.
+            Announcing impression unaffected day 
+            his are unreserved indulgence. Him hard
+            find read are you sang. Parlors visited 
+            noisier how explain pleased his see suppose.
+            Do ashamed assured on related offence at equally
+            totally. Use mile her whom they its. Kept hold an
+            want as he bred of. Was dashwood landlord cheerful 
+            husbands two. Estate why theirs indeed him polite 
+            old settle though she. In as at regard easily narrow.
+            Am finished rejoiced drawings so he elegance. Set lose dear 
+            upon had two its what seen. Held she sir how know what such whom.
+            Esteem put uneasy set piqued son depend her others. Two dear held 
+            mrs feet view her old fine. Bore can led than how has rank. 
+            Discovery any extensive has commanded direction. 
+            Short at front which blind as. Ye as procuring unwilling 
+            principle by.`,
     date: "2025-08-01",
   },
   {
@@ -51,7 +68,24 @@ export const latest = [
     badge: "Frontend",
     image: "https://picsum.photos/id/1016/600/400",
     content:
-      "Resilient frontend design ensures better UX and minimizes disruptions in modern web applications.",
+     `Travel? Yeah, okay.
+            He oppose at thrown desire of no.
+            Announcing impression unaffected day 
+            his are unreserved indulgence. Him hard
+            find read are you sang. Parlors visited 
+            noisier how explain pleased his see suppose.
+            Do ashamed assured on related offence at equally
+            totally. Use mile her whom they its. Kept hold an
+            want as he bred of. Was dashwood landlord cheerful 
+            husbands two. Estate why theirs indeed him polite 
+            old settle though she. In as at regard easily narrow.
+            Am finished rejoiced drawings so he elegance. Set lose dear 
+            upon had two its what seen. Held she sir how know what such whom.
+            Esteem put uneasy set piqued son depend her others. Two dear held 
+            mrs feet view her old fine. Bore can led than how has rank. 
+            Discovery any extensive has commanded direction. 
+            Short at front which blind as. Ye as procuring unwilling 
+            principle by.`,
     date: "2025-08-05",
   },
   {

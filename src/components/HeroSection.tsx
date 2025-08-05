@@ -10,8 +10,6 @@ const HeroSection = ({ onScrollClick }: { onScrollClick: () => void }) => {
       className="w-full h-[60vh] bg-cover bg-center"
       style={{ backgroundImage: `url('/img/hero1.jpg')` }}
     >
-      {/* NavBar */}
-      <NavBar />
       {/* Hero Content */}
       <div className="flex flex-col items-center justify-center h-full text-center text-white px-4">
         <h2 className="text-4xl sm:text-5xl lora md:text-6xl font-bold mb-4">

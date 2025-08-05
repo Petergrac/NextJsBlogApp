@@ -17,7 +17,7 @@ const Featured = () => {
           {sample.map((post) => (
             <Card
               key={post.id}
-              className="mb-4 text-white lora nav"
+              className="mb-4 text-white lora nav max-h-[400px] overflow-hidden"
               style={{ backgroundImage: `url('/img/hero1.jpg')` }}
             >
               <CardHeader>

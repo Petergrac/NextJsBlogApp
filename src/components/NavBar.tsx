@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const NavBar = () => {
   return (
-      <nav className="flex items-center justify-between p-6 text-white">
+      <nav className="flex bg-slate-900 items-center justify-between p-6 text-white">
         <h1 className="text-4xl  lora">Escape</h1>
 
         {/* Desktop menu */}
@@ -33,6 +33,11 @@ const NavBar = () => {
           <li className="nav">
             <Link href="/contact" passHref>
               Contact
+            </Link>
+          </li>
+          <li className="nav">
+            <Link href="/new" passHref>
+              New-Post
             </Link>
           </li>
         </ul>
@@ -68,6 +73,11 @@ const NavBar = () => {
               <DropdownMenuItem className='text-2xl text-white'  asChild>
                 <Link href="/contact" passHref>
                   CONTACT
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className='text-2xl text-white'  asChild>
+                <Link href="/new" passHref>
+                  NEW POST
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>

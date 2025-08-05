@@ -137,3 +137,28 @@
 .navContent {
   @apply bg-blue-950/95 text-black h-[80vh] w-[80vw] flex flex-col items-center gap-10 pt-10;
 }
+.ce-block__content,
+.ce-toolbar__content {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: #333;
+}
+/* styles/globals.css or component CSS */
+.ce-toolbar__plus {
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.ce-toolbar__plus:hover {
+  background-color: #d0d0d0;
+}
+
+.ce-popover {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 8px;
+}

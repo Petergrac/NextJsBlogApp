@@ -37,7 +37,7 @@ const MostRecent = React.forwardRef<HTMLDivElement>((_,ref) => {
             <CardHeader>
               <CardTitle className="hover:underline">{post.title}</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="max-h-15 overflow-hidden">
               <p>{post.content}</p>
             </CardContent>
             <CardFooter className="flex justify-between items-center border-t ">
