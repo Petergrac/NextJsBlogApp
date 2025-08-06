@@ -67,8 +67,7 @@ export const latest = [
     avatar: "https://i.pravatar.cc/150?img=20",
     badge: "Frontend",
     image: "https://picsum.photos/id/1016/600/400",
-    content:
-     `Travel? Yeah, okay.
+    content: `Travel? Yeah, okay.
             He oppose at thrown desire of no.
             Announcing impression unaffected day 
             his are unreserved indulgence. Him hard
@@ -111,3 +110,80 @@ export const latest = [
     date: "2025-08-02",
   },
 ];
+
+export const testData = {
+  time: 1754465266436,
+  blocks: [
+    {
+      id: "header1",
+      type: "header",
+      data: {
+        text: "Exploring the Wild",
+        level: 2,
+      },
+    },
+    {
+      id: "paragraph1",
+      type: "paragraph",
+      data: {
+        text: "Discover breathtaking landscapes and untouched nature in our latest adventure. We bring you visuals that speak louder than words.",
+      },
+    },
+    {
+      id: "image1",
+      type: "image",
+      data: {
+        file: {
+          url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+        },
+        caption: "A quiet forest trail.",
+        withBorder: true,
+        withBackground: false,
+        stretched: false,
+      },
+    },
+    {
+      id: "image2",
+      type: "image",
+      data: {
+        file: {
+          url: "https://images.pexels.com/photos/33162139/pexels-photo-33162139.jpeg",
+        },
+        caption: "Sunrise over the mountains.",
+        withBorder: false,
+        withBackground: false,
+        stretched: false,
+      },
+    },
+
+    {
+      id: "list1",
+      type: "list",
+      data: {
+        style: "ordered",
+        items: [
+          "Hiking across rugged terrain",
+          "Camping under the stars",
+          "Wildlife photography at dawn",
+        ],
+      },
+    },
+    {
+      id: "video1",
+      type: "video",
+      data: {
+        file: {
+          url: "https://www.w3schools.com/html/mov_bbb.mp4",
+        },
+        caption: "Scenic drone footage",
+      },
+    },
+    {
+      id: "paragraph2",
+      type: "paragraph",
+      data: {
+        text: "Join us in the next episode as we dive deep into the Amazon rainforest. Stay tuned!",
+      },
+    },
+  ],
+};

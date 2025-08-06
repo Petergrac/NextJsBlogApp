@@ -1,52 +1,90 @@
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { sample } from "@/data/data";
+import { JSX } from "react";
+import { useEditorStore } from "@/context/EditorStore";
+
 const Featured = () => {
+  const content = useEditorStore((state) => state.content);
+  console.log(content?.blocks);
+
   return (
-    <section>
-      <div className="text-white lg:px-30">
-        <p className="text-center text-2xl border-b mb-2 text-black font-bold lora py-4">Featured Posts</p>
-        <div className="mx-3 md:grid md:grid-cols-2 md:gap-4 ">
-          {sample.map((post) => (
-            <Card
-              key={post.id}
-              className="mb-4 text-white lora nav max-h-[400px] overflow-hidden"
-              style={{ backgroundImage: `url('/img/hero1.jpg')` }}
-            >
-              <CardHeader>
-                <div className="flex items-center justify-between">
-                  <CardTitle className="hover:underline text-2xl">
-                    {post.title}
-                  </CardTitle>
-                  <span className="text-xs bg-blue-500 text-white pl-3 pr-2 py-1 rounded">
-                    {post.badge}
-                  </span>
+    <section className="media dark:bg-slate-950 dark:text-white pb-4">
+      <div className="lg:px-30">
+        <p className="text-center text-2xl border-b mb-2 font-bold lora py-4">
+          Featured Posts
+        </p>
+        <div>
+          {content &&
+            content.blocks.map((block) => {
+              //Dynamic Content
+              let content;
+
+              switch (block.type) {
+                case "title":
+                  const Title =
+                    `${block.data.titleType.toLowerCase()}` as keyof JSX.IntrinsicElements;
+                  content = (
+                    <Title className="text-2xl font-bold pb-2">
+                      {block.data.text}
+                    </Title>
+                  );
+                  break;
+                // Headings
+                case "header":
+                  const HeaderTag =
+                    `h${block.data.level}` as keyof JSX.IntrinsicElements;
+                  content = (
+                    <HeaderTag className="text-2xl font-bold pb-2">
+                      {block.data.text}
+                    </HeaderTag>
+                  );
+                  break;
+                // Paragraphs
+                case "paragraph":
+                  content = <p>{block.data.text}</p>;
+                  break;
+                //  Images
+                case "image":
+                  content = <img src={block.data.file?.url} alt={block.id} />;
+                  break;
+                // span
+                case "span":
+                  content = <span>{block.data.text}</span>;
+                  break;
+                // captions
+                case "caption":
+                  content = <p>{block.data.caption}</p>;
+                  break;
+                case "list":
+                  content =
+                    Array.isArray(block.data.items) &&
+                    block.data.items.length > 0 ? (
+                      <ul className="indent-8 list-inside">
+                        {block.data.items.map(
+                          (
+                            item: { content: string },
+                            i: string | number
+                          ) => (
+                            <li
+                              className={
+                                block.data.style === "unordered"
+                                  ? "list-disc"
+                                  : "list-decimal"
+                              }
+                              key={i}
+                            >
+                              {item.content}
+                            </li>
+                          )
+                        )}
+                      </ul>
+                    ) : null;
+              }
+              return (
+                <div className="pb-5" key={block.id}>
+                  {content}
                 </div>
-                <CardDescription>{post.date}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p  className="text-lg">{post.content}</p>
-              </CardContent>
-              <CardFooter className="flex justify-between gap-2 bg-black/50">
-                <div className="flex items-center gap-2">
-                  <img
-                    src={post.avatar}
-                    alt={post.author}
-                    className="w-8 h-8 rounded-full"
-                  />
-                  <p className="text-sm text-white/70 ">{post.author}</p>
-                </div>
-                <p>{post.date}</p>
-              </CardFooter>
-            </Card>
-          ))}
+              );
+            })}
         </div>
       </div>
     </section>

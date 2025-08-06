@@ -3,6 +3,7 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
   --color-background: var(--background);
@@ -137,12 +138,7 @@
 .navContent {
   @apply bg-blue-950/95 text-black h-[80vh] w-[80vw] flex flex-col items-center gap-10 pt-10;
 }
-.ce-block__content,
-.ce-toolbar__content {
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  color: #333;
-}
+
 /* styles/globals.css or component CSS */
 .ce-toolbar__plus {
   background-color: #f0f0f0;
@@ -161,4 +157,17 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   padding: 8px;
+}
+/* dark mode support */
+.dark .ce-toolbar,
+.dark .ce-popover {
+  background-color: #1f1f1f;
+  color: white;
+  border-color: #333;
+}
+.glass {
+  @apply backdrop-blur-[20px] shadow-[0_8px_32px_0_rgba(0,0,0,0.37)];
+}
+.media{
+  @apply md:px-5 lg:px-10 2xl:px-50 px-5; 
 }

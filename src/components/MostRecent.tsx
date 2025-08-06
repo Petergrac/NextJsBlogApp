@@ -12,15 +12,15 @@ import { latest } from "@/data/data";
 
 const MostRecent = React.forwardRef<HTMLDivElement>((_,ref) => {
   return (
-    <section ref={ref}>
+    <section ref={ref} className="media pb-5 dark:bg-slate-950 dark:text-white">
       <p className="text-center tracking-wider font-bold lora text-2xl py-5">
         Most Recent
       </p>
-      <div className="md:grid md:grid-cols-3 lg:grid-cols-5 lg:mx-30">
+      <div className="md:grid md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-5">
         {latest.map((post) => (
           <Card
             key={post.id}
-            className="mb-2 mx-3 flex flex-col justify-between text-sm nav"
+            className="mb-2 flex flex-col justify-between text-sm nav"
           >
             <div className="relative overflow-hidden">
               <img
